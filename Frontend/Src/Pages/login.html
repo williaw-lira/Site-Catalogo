@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre - Minha Vitrine</title>
+    <title>Login - Minha Vitrine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -43,15 +43,22 @@
         </nav>
     </header>
 
-    <!-- Conteúdo -->
+    <!-- Formulário de Login -->
     <main class="mt-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white p-8 rounded-lg shadow-lg animate-fadeIn">
-            <h1 class="text-3xl font-bold text-gray-800">Sobre Nós</h1>
-            <p class="mt-4 text-gray-600">
-            Bem-vindo à Minha Vitrine! Somos especializados em produtos de pesca e nos dedicamos a oferecer os melhores equipamentos para os amantes da pesca. Nossa missão é proporcionar uma experiência de compra agradável e confiável.
-            </p>
-        </div>
+        <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg animate-fadeIn">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Login </h1>
+        <form id="login-form" class="space-y-4">
+            <div>
+            <label for="username" class="block text-gray-700">Usuário</label>
+            <input type="text" id="username" name="username" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+            <div>
+            <label for="password" class="block text-gray-700">Senha</label>
+            <input type="password" id="password" name="password" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+            <button type="submit" class="w-full bg-blue-900 text-white p-2 rounded hover:bg-blue-800 transition">Entrar</button>
+            <p id="error-msg" class="text-red-500 text-sm hidden">Credenciais inválidas.</p>
+        </form>
         </div>
     </main>
 
@@ -61,9 +68,25 @@
     </footer>
 
     <script>
+        // Toggle do menu mobile
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        
+        // Validação do login
+        const loginForm = document.getElementById('login-form');
+        loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        
+        // Usuários permitidos: "nono" ou "williaw" com senha "rioveio123"
+        if ((username === 'nono' || username === 'williaw') && password === 'rioveio123') {
+            window.location.href = 'cadastro.html'; // Redireciona para a área admin
+        } else {
+            document.getElementById('error-msg').classList.remove('hidden');
+        }
+        });
     </script>
     </body>
     </html>

@@ -1,95 +1,105 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Nono</title>
-<!-- Link para o CSS (se houver) -->
-    <link rel="stylesheet" href="/Frontend//Styles/styles.css">
-</head>
-<body>
-    <!-- Cabeçalho com a navbar -->
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Cadastro de Produtos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .animate-fadeIn { animation: fadeIn 1s ease-in-out; }
+    </style>
+    </head>
+    <body class="bg-gray-100">
+    <!-- Navbar Admin -->
     <header>
-    <nav class="navbar">
-        <div class="nav-container">
-        <a href="#" class="logo">Cadastro - admin </a>
-        
-        <!-- Botão de menu hambúrguer para dispositivos móveis -->
-        <button class="menu-toggle" aria-label="Abrir menu">
-            <span class="hamburger"></span>
-        </button>
-        
-        <!-- Lista de links do menu -->
-        <ul class="nav-menu">
-            <li><a href="/Frontend/Src/Pages/index.html">Início</a></li>
-            <li><a href="/Frontend/Src/Pages/produtos.html">Produtos</a></li>
-            <li><a href="/Frontend/Src/Pages/sobre.html">Sobre</a></li>
-            <li><a href="/Frontend/Src/Pages/contato.html">Contato</a></li>
-        </ul>
+        <nav class="bg-blue-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="text-white font-bold text-xl">MinhaVitrine Admin</a>
+            <div class="hidden md:flex space-x-4">
+            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Início</a>
+            <a href="produtos.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Produtos</a>
+            <a href="sobre.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
+            <a href="contato.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contato</a>
+            <a href="login.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Logout</a>
+            </div>
+            <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            </div>
         </div>
-    </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="index.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Início</a>
+            <a href="produtos.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Produtos</a>
+            <a href="sobre.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+            <a href="contato.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contato</a>
+            <a href="login.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Logout</a>
+            </div>
+        </div>
+        </nav>
     </header>
 
-<!-- Conteúdo principal -->
-    <main>
-    <!-- Seção principal onde vai o conteúdo do site -->
-    <section class="main-content">
-        <h1 class="h1-admin">Área admin</h1>
-        
-        <form action="">
-            <fieldset>
-                <legend>Cadastro de Produtos</legend>
-
-                <label for="">Nome Produto</label><br>
-                <input type="text" placeholder="Nome do Produto" required><br>
-
-                <label for="">Preço</label><br>
-                <input type="text" placeholder="Preço"><br>
-                <!-- aqui em marcas verificar no futuro se vc vai usar a questão do selcted ou
-                se ao cadastrar ja vai jogar para o selcted lá em produtos -->
-                <label for=""> Marca Produto</label><br>
-                <input type="text" placeholder="Marca do Produto"><br><br>
-
-                <label for="">Categoria</label><br>
-                <select name="Categoria" class="categoria">
-                    <option value="varas">Varas</option>
-                    <option value="carretilhas">Carretilhas</option>
-                    <option value="molinetes">Molinetes</option>
-                    <option value="linhas">Linhas</option>
-                    <option value="anzois">Anzóis</option>
-                    <option value="iscas">Iscas</option>
-                    <option value="caixas">Caixas</option>
-                    <option value="acessorios">Acessórios</option>
-                    <option value="eletronicos">Eletrônicos</option>
-                    <option value="barcos">Barcos Equipamentos</option>
-                    <option value="vestuario">Vestuario</option>
-                    <option value="conveniencia">Conveniência</option>
-                    <option value="outros" selected>Outros</option>
-                    
-                </select><br><br>
-
-                <label for="">Descrição</label><br>
-                <textarea name="" class="descricao" cols="30" rows="5" placeholder="Descrição do Produto"></textarea><br>
-
-                <label for="">Imagem Produto</label><br>
-                <input type="file" name="imagem" class="imagem" accept="image/*"><br>
-
-
-                
-            </fieldset>
-
-
+    <!-- Área Admin: Cadastro de Produtos -->
+    <main class="mt-10">
+        <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg animate-fadeIn">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Área Admin - Cadastro de Produtos</h1>
+        <form>
+            <div class="mb-4">
+            <label class="block text-gray-700">Nome do Produto</label>
+            <input type="text" placeholder="Nome do Produto" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
+            </div>
+            <div class="mb-4">
+            <label class="block text-gray-700">Preço</label>
+            <input type="text" placeholder="Preço" class="mt-1 block w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="mb-4">
+            <label class="block text-gray-700">Marca do Produto</label>
+            <input type="text" placeholder="Marca do Produto" class="mt-1 block w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="mb-4">
+            <label class="block text-gray-700">Categoria</label>
+            <select class="mt-1 block w-full p-2 border border-gray-300 rounded">
+                <option value="varas">Varas</option>
+                <option value="carretilhas">Carretilhas</option>
+                <option value="molinetes">Molinetes</option>
+                <option value="linhas">Linhas</option>
+                <option value="anzois">Anzóis</option>
+                <option value="iscas">Iscas</option>
+                <option value="caixas">Caixas</option>
+                <option value="acessorios">Acessórios</option>
+                <option value="eletronicos">Eletrônicos</option>
+                <option value="barcos">Barcos Equipamentos</option>
+                <option value="vestuario">Vestuário</option>
+                <option value="conveniencia">Conveniência</option>
+                <option value="outros" selected>Outros</option>
+            </select>
+            </div>
+            <div class="mb-4">
+            <label class="block text-gray-700">Descrição</label>
+            <textarea placeholder="Descrição do Produto" class="mt-1 block w-full p-2 border border-gray-300 rounded" rows="4"></textarea>
+            </div>
+            <div class="mb-4">
+            <label class="block text-gray-700">Imagem do Produto</label>
+            <input type="file" class="mt-1 block w-full text-gray-700">
+            </div>
+            <button type="submit" class="w-full bg-blue-900 text-white p-2 rounded hover:bg-blue-800 transition">Cadastrar Produto</button>
         </form>
-    
-    </section>
+        </div>
     </main>
 
-    <!-- Rodapé -->
-    <footer>
-    <p>&copy; 2025 MinhaVitrine. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-gray-300 p-4 mt-10 text-center">
+        <p>&copy; 2025 MinhaVitrine. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Link para o JavaScript (se houver) -->
-    <script src="/Backend/Src/script.js" src="/Backend/Src/cadastro.js"></script>
-</body>
-</html>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+    </script>
+    </body>
+    </html>
