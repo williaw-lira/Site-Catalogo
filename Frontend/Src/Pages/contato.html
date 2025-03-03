@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+<!-- Link para o CSS (se houver) -->
+    <link rel="stylesheet" href="/Frontend//Styles/styles.css">
+    <link rel="stylesheet" href="/Frontend//Styles/contato.css">
+</head>
+<body>
+    <!-- Cabeçalho com a navbar -->
+    <header>
+    <nav class="navbar">
+        <div class="nav-container">
+        <a href="#" class="logo">MinhaVitrine</a>
+        
+        <!-- Botão de menu hambúrguer para dispositivos móveis -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="hamburger"></span>
+        </button>
+        
+        <!-- Lista de links do menu -->
+        <ul class="nav-menu">
+            <li><a href="/Frontend/Src/Pages/index.html">Início</a></li>
+            <li><a href="/Frontend/Src/Pages/produtos.html">Produtos</a></li>
+            <li><a href="/Frontend/Src/Pages/sobre.html">Sobre</a></li>
+            <li><a href="/Frontend/Src/Pages/contato.html">Contato</a></li>
+        </ul>
+        </div>
+    </nav>
+    </header>
+
+<!-- Conteúdo principal -->
+    <main>
+        <!-- Seção principal onde vai o conteúdo do site -->
+        <section class="main-content">
+                <!-- Informações de Contato -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h2><i class="fas fa-map-marker-alt"></i> Localização</h2>
+                                <p class="mb-0">
+                                    Av. Brasil - Porto Camargo<br>
+                                    Icaraima/PR, 87530-000
+                                </p>
+                            </div>
+
+                            <div class="mb-4">
+                                <h2><i class="fas fa-phone"></i> Contatos</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="tel:+5544999889253">(44) 99988-9253</a></li>
+                                    <li><span>VHF Canal 16 (156.800)</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="mb-4">
+                                <h2><i class="fas fa-clock"></i> Horário</h2>
+                                <p>Todos os dias das 06:00 às 21:00</p>
+                            </div>
+
+                            <div class="redes-sociais">
+                                <a href="https://wa.me/5544999889253" class="btn btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="https://instagram.com/nono_veiodorio" class="btn btn-instagram">
+                                    <i class="fab fa-instagram"></i> Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Av.%20Brasil%20-%20Porto%20Camargo,%20Icaraima%20PR&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+    <p>&copy; 2025 MinhaVitrine. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o JavaScript (se houver) -->
+    <script src="/Backend/Src/script.js"></script>
+</body>
+</html>

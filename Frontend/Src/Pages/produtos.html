@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+<!-- Link para o CSS (se houver) -->
+    <link rel="stylesheet" href="/Frontend//Styles/styles.css">
+    <link rel="stylesheet" href="/Frontend/Src/Pages/cadastro.html">
+</head>
+<body>
+    <!-- Cabeçalho com a navbar -->
+    <header>
+    <nav class="navbar">
+        <div class="nav-container">
+        <a href="#" class="logo">MinhaVitrine</a>
+        
+        <!-- Botão de menu hambúrguer para dispositivos móveis -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="hamburger"></span>
+        </button>
+        
+        <!-- Lista de links do menu -->
+        <ul class="nav-menu">
+            <li><a href="/Frontend/Src/Pages/index.html">Início</a></li>
+            <li><a href="/Frontend/Src/Pages/produtos.html">Produtos</a></li>
+            <li><a href="/Frontend/Src/Pages/sobre.html">Sobre</a></li>
+            <li><a href="/Frontend/Src/Pages/contato.html">Contato</a></li>
+        </ul>
+        </div>
+    </nav>
+    </header>
+
+<!-- Conteúdo principal -->
+    <main>
+    <!-- Seção principal onde vai o conteúdo do site -->
+    <section class="main-content">
+        <fieldset>
+            <legend>Produtos</legend>
+            <select name="Produtos" class="produtos">
+                <option value="todos">Todos</option>
+                <option value="marcas">Marcas</option>
+                <option value="varas">Varas</option>
+                <option value="carretilhas">Carretilhas</option>
+                <option value="molinetes">Molinetes</option>
+                <option value="linhas">Linhas</option>
+                <option value="anzois">Anzóis</option>
+                <option value="iscas">Iscas</option>
+                <option value="caixas">Caixas</option>
+                <option value="acessorios">Acessórios</option>
+                <option value="eletronicos">Eletrônicos</option>
+                <option value="barcos">Barcos Equipamentos</option>
+                <option value="vestuario">Vestuario</option>
+                <option value="outros">Outros</option>
+                
+            </select>
+        </fieldset>
+    </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+    <p>&copy; 2025 MinhaVitrine. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o JavaScript (se houver) -->
+    <script src="/Backend/Src/script.js"></script>
+</body>
+</html>

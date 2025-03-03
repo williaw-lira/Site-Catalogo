@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Nono</title>
+<!-- Link para o CSS (se houver) -->
+    <link rel="stylesheet" href="/Frontend//Styles/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho com a navbar -->
+    <header>
+    <nav class="navbar">
+        <div class="nav-container">
+        <a href="#" class="logo">Cadastro - admin </a>
+        
+        <!-- Botão de menu hambúrguer para dispositivos móveis -->
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="hamburger"></span>
+        </button>
+        
+        <!-- Lista de links do menu -->
+        <ul class="nav-menu">
+            <li><a href="/Frontend/Src/Pages/index.html">Início</a></li>
+            <li><a href="/Frontend/Src/Pages/produtos.html">Produtos</a></li>
+            <li><a href="/Frontend/Src/Pages/sobre.html">Sobre</a></li>
+            <li><a href="/Frontend/Src/Pages/contato.html">Contato</a></li>
+        </ul>
+        </div>
+    </nav>
+    </header>
+
+<!-- Conteúdo principal -->
+    <main>
+    <!-- Seção principal onde vai o conteúdo do site -->
+    <section class="main-content">
+        <h1 class="h1-admin">Área admin</h1>
+        
+        <form action="">
+            <fieldset>
+                <legend>Cadastro de Produtos</legend>
+
+                <label for="">Nome Produto</label><br>
+                <input type="text" placeholder="Nome do Produto" required><br>
+
+                <label for="">Preço</label><br>
+                <input type="text" placeholder="Preço"><br>
+                <!-- aqui em marcas verificar no futuro se vc vai usar a questão do selcted ou
+                se ao cadastrar ja vai jogar para o selcted lá em produtos -->
+                <label for=""> Marca Produto</label><br>
+                <input type="text" placeholder="Marca do Produto"><br><br>
+
+                <label for="">Categoria</label><br>
+                <select name="Categoria" class="categoria">
+                    <option value="varas">Varas</option>
+                    <option value="carretilhas">Carretilhas</option>
+                    <option value="molinetes">Molinetes</option>
+                    <option value="linhas">Linhas</option>
+                    <option value="anzois">Anzóis</option>
+                    <option value="iscas">Iscas</option>
+                    <option value="caixas">Caixas</option>
+                    <option value="acessorios">Acessórios</option>
+                    <option value="eletronicos">Eletrônicos</option>
+                    <option value="barcos">Barcos Equipamentos</option>
+                    <option value="vestuario">Vestuario</option>
+                    <option value="conveniencia">Conveniência</option>
+                    <option value="outros" selected>Outros</option>
+                    
+                </select><br><br>
+
+                <label for="">Descrição</label><br>
+                <textarea name="" class="descricao" cols="30" rows="5" placeholder="Descrição do Produto"></textarea><br>
+
+                <label for="">Imagem Produto</label><br>
+                <input type="file" name="imagem" class="imagem" accept="image/*"><br>
+
+
+                
+            </fieldset>
+
+
+        </form>
+    
+    </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+    <p>&copy; 2025 MinhaVitrine. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Link para o JavaScript (se houver) -->
+    <script src="/Backend/Src/script.js" src="/Backend/Src/cadastro.js"></script>
+</body>
+</html>
