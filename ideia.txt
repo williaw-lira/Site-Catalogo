@@ -1,0 +1,12 @@
+front end criado 
+
+backend - criar usando 
+npm
+git hub
+Node js
+nodemon
+express 
+mysql com sequelize do npm
+conectar o sql
+models no sequelize 
+handlebars

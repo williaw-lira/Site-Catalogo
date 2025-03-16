@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Minha Vitrine</title>
+    <title>Login - Nono Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -14,30 +14,33 @@
     <!-- Navbar padrão -->
     <header>
         <nav class="bg-blue-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-            <a href="index.html" class="text-white font-bold text-xl">MinhaVitrine</a>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+            <a href="/" class="text-white font-bold text-xl">Nono Iscas e Conveniência</a>
             <div class="hidden md:flex space-x-4">
-            <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Início</a>
-            <a href="produtos.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Produtos</a>
-            <a href="sobre.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
-            <a href="contato.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contato</a>
-            <a href="login.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                <a href="/" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Início</a>
+                <a href="/produtos" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Produtos</a>
+                <a href="/sobre" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sobre</a>
+                <a href="/contato" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contato</a>
+                <a href="/login" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
             </div>
             <div class="md:hidden">
-            <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-            </button>
+                </button>
             </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="index.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Início</a>
-            <a href="produtos.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Produtos</a>
-            <a href="sobre.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-            <a href="contato.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contato</a>
-            <a href="login.html" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Login</a>
+            </div>
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="/" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Início</a>
+                <a href="/produtos" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Produtos</a>
+                <a href="/sobre" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+                <a href="/contato" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Contato</a>
+                <a href="/login" class="block text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">Login</a>
+            </div>
             </div>
         </div>
         </nav>
@@ -46,8 +49,8 @@
     <!-- Formulário de Login -->
     <main class="mt-10">
         <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg animate-fadeIn">
-        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Login </h1>
-        <form id="login-form" class="space-y-4">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 text-center">Login</h1>
+        <form id="login-form" class="space-y-4" action="/login" method="post">
             <div>
             <label for="username" class="block text-gray-700">Usuário</label>
             <input type="text" id="username" name="username" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
@@ -57,7 +60,8 @@
             <input type="password" id="password" name="password" class="mt-1 block w-full p-2 border border-gray-300 rounded" required>
             </div>
             <button type="submit" class="w-full bg-blue-900 text-white p-2 rounded hover:bg-blue-800 transition">Entrar</button>
-            <p id="error-msg" class="text-red-500 text-sm hidden">Credenciais inválidas.</p>
+            <!-- Aqui você pode exibir uma mensagem de erro, caso a query string error esteja presente -->
+            <p id="error-msg" class="text-red-500 text-sm" style="display: none;">Credenciais inválidas.</p>
         </form>
         </div>
     </main>
@@ -72,21 +76,12 @@
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
-        
-        // Validação do login
-        const loginForm = document.getElementById('login-form');
-        loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        
-        // Usuários permitidos: "nono" ou "williaw" com senha "rioveio123"
-        if ((username === 'nono' || username === 'williaw') && password === 'rioveio123') {
-            window.location.href = 'cadastro.html'; // Redireciona para a área admin
-        } else {
-            document.getElementById('error-msg').classList.remove('hidden');
+
+        // Exemplo: exibir mensagem de erro se houver query string ?error=1
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('error') === '1') {
+        document.getElementById('error-msg').style.display = 'block';
         }
-        });
     </script>
     </body>
     </html>
